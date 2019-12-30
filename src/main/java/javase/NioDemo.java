@@ -15,6 +15,7 @@ import java.nio.charset.CharsetEncoder;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Slf4j
 public class NioDemo {
@@ -125,13 +126,18 @@ public class NioDemo {
     }
 
     //  测试 BufferReader  字符输出流
+    /**
+     * bufferReader中读进来 readerLine() 是否可以循环调用读取
+     */
     @Test
     public void testBufferReader() throws IOException {
-        File file = new File("C:\\Users\\PENG\\Desktop\\test_1.txt");
+        File file = new File("C:\\Users\\Administrator\\Desktop\\新建文本文档.txt");
         FileReader fileReader = new FileReader(file);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
-
         String s = bufferedReader.readLine();
+        //bufferedReader.skip(s.length());
+        //List<Object> collect = bufferedReader.lines().collect(Collectors.toList());
+        String s1 = bufferedReader.readLine();
         System.out.println(s);
 
 

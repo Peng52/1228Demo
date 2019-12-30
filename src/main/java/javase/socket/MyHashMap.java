@@ -14,9 +14,10 @@ import java.util.Map;
 @Slf4j
 public class MyHashMap<K, V> {
 
+    /**
+     * 线程安全的类
+     */
     private Map<K, V> hashMap = Collections.synchronizedMap(new HashMap<K, V>());
-
-    // 存入一个元素Key , Value
 
     /**
      * 存入一个 Key Value ,且Value不重复
@@ -53,14 +54,28 @@ public class MyHashMap<K, V> {
     }
 
     /**
-     *  获取用户 V
+     * 获取用户 V
+     *
      * @param k key
      * @return Value
      */
-    public V getValue(K k){
-       return hashMap.get(k);
+    public V getValue(K k) {
+        return hashMap.get(k);
     }
 
+    /**
+     * 获取 hashMap
+     */
+    public Map<K, V> getHashMap(){
+        return hashMap;
+    }
+
+    /**
+     * 去除其中的聊天室
+     */
+    public V remove(K k){
+        return hashMap.remove(k);
+    }
 
 
 }

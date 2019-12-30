@@ -22,20 +22,20 @@ public class ChatRoomServer {
 
     // 主线程
     public static void main(String[] args) throws IOException {
-        ChatRoomServer chatRoomServer = new ChatRoomServer();
 
         // 创建ServerSocket
-        InetAddress ipAddress = Inet4Address.getByName("192.168.126.1");
+        InetAddress ipAddress = Inet4Address.getByName("192.168.1.228");
         ServerSocket serverSocket = new ServerSocket(65533, 10, ipAddress);
+        int count = 0;
         while (true) {
+            count ++;
             Socket accept = serverSocket.accept();
-            //new Thread(new ChatRoomSocketServer()).start();
             // 每一个客户端连接过来 Socket，都会用一个单独的线程去跑
-
+            new Thread(new ChatRoomSocketServer(accept),"I am Thread " + count).start();
         }
 
     }
-    // 实现一个HashMap : key 与 Value 都有唯一性
+
 
 
 }
