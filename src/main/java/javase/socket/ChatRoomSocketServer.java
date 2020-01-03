@@ -47,11 +47,12 @@ public class ChatRoomSocketServer implements Runnable {
                 // 用户登陆操作
                 if (readLineMSG.startsWith(UserLable.USER_LOGIN_PREFIX) && readLineMSG.endsWith(UserLable.USER_LOGIN_SUFFIX)) {
                     String userIdMsg = getRealMessage(readLineMSG, UserLable.USER_LOGIN_PREFIX, UserLable.USER_LOGIN_SUFFIX);
-                    Long userIdLogin = Long.getLong(userIdMsg);
-                    if (userIdLogin == null || userIdLogin < 0) {
+                    Long userIdLogin = Long.parseLong(userIdMsg);
+                    if (userIdLogin < 0) {
                         return;
                         // TODO: 2019/12/28 用户输入的ID不合法
                     }
+                    System.out.println("用户信息 ：" + userIdMsg);
                     // 判断用户是否重复登录
                     PrintStream value = myHashMap.getValue(userIdLogin);
                     if (value != null) {
@@ -59,7 +60,8 @@ public class ChatRoomSocketServer implements Runnable {
                     } else {
                         // 保存用户的socket
                         myHashMap.put(userIdLogin, printStream);
-                        printStream.print(CustomMessage.USER_LOGIN_SUCCESS);
+                        printStream.println(CustomMessage.USER_LOGIN_SUCCESS);
+                        System.out.println("登陆成功......用户ID" + userIdLogin);
                     }
 
                 }

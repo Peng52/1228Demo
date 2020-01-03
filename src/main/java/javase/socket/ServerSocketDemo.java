@@ -21,14 +21,16 @@ public class ServerSocketDemo {
     public void test() throws IOException {
         //Inet4Address.getByAddress(new byte[]{192,168,126,1});
         InetAddress ipAddress = Inet4Address.getByName("192.168.126.1");
-        ServerSocket serverSocket = new ServerSocket(65533,10,ipAddress);
-        Socket socket = serverSocket.accept();
-        OutputStream outputStream = socket.getOutputStream();
-        PrintStream printStream = new PrintStream(outputStream);
-        printStream.println("SeverSocket ： 2020,新年快乐...");
-        printStream.close();
-        serverSocket.close();
+        while (true){
+            ServerSocket serverSocket = new ServerSocket(65533,10,ipAddress);
+            Socket socket = serverSocket.accept();
+            OutputStream outputStream = socket.getOutputStream();
+            PrintStream printStream = new PrintStream(outputStream);
+            printStream.println("SeverSocket ： 2020,新年快乐...");
+        }
 
+        //printStream.close();
+        //serverSocket.close();
 
     }
 

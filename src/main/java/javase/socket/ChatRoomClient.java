@@ -13,7 +13,7 @@ public class ChatRoomClient {
 
 
     public static void main(String[] str) throws IOException {
-        Socket socket = new Socket("192.168.1.228", 65533);
+        Socket socket = new Socket("192.168.126.1", 65533);
         //  输入流
         InputStream inputStream = socket.getInputStream();
         InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
@@ -29,13 +29,16 @@ public class ChatRoomClient {
         while (true) {
             String readLine = JOptionPane.showInputDialog(tip + "请输入用户名");
             printStream.println(readLine);
+            System.out.println("输入用户名....等待Server回应.....");
             String response = bufferedReader.readLine();
+            System.out.println("回应" + response);
             // 用户登录失败,则重试
             if (response != null && response.equals(CustomMessage.USER_LOGIN_REPEAT)) {
                 continue;
             }
             // 登录成功
             if (response != null && response.equals(CustomMessage.USER_LOGIN_SUCCESS)) {
+                System.out.println("真的成功啦.....");
                 break;
             }
         }

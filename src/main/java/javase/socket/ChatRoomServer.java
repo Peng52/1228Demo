@@ -1,7 +1,6 @@
 package javase.socket;
 
 import java.io.IOException;
-import java.io.PrintStream;
 import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.net.ServerSocket;
@@ -24,7 +23,7 @@ public class ChatRoomServer {
     public static void main(String[] args) throws IOException {
 
         // 创建ServerSocket
-        InetAddress ipAddress = Inet4Address.getByName("192.168.1.228");
+        InetAddress ipAddress = Inet4Address.getByName("192.168.126.1");
         ServerSocket serverSocket = new ServerSocket(65533, 10, ipAddress);
         int count = 0;
         while (true) {
