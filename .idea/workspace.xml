@@ -34,12 +34,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>mode</find>
-      <find>getpath</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -93,7 +87,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ChatRoomClient">
+  <component name="RunManager" selected="Application.ChatRoomServer">
     <configuration name="ChatRoomClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="javase.socket.ChatRoomClient" />
       <module name="demo" />
@@ -152,8 +146,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ChatRoomClient" />
         <item itemvalue="Application.ChatRoomServer" />
+        <item itemvalue="Application.ChatRoomClient" />
         <item itemvalue="JUnit.NioDemo.testBufferReader" />
         <item itemvalue="JUnit.NioDemo.testMapKey" />
         <item itemvalue="JUnit.ClientSocket.testClientSocket" />
@@ -176,7 +170,7 @@
       <workItem from="1577198441089" duration="198000" />
       <workItem from="1577198664194" duration="7661000" />
       <workItem from="1577458098148" duration="6947000" />
-      <workItem from="1578125809859" duration="910000" />
+      <workItem from="1578125809859" duration="1710000" />
     </task>
     <servers />
   </component>
@@ -226,7 +220,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -242,6 +236,11 @@
         <entry key="Branch">
           <value>
             <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
               <RecentGroup>
                 <option name="FILTER_VALUES">
                   <option value="HEAD" />

@@ -72,7 +72,7 @@ public class ChatRoomSocketServer implements Runnable {
                     char[] buffer = new char[10];
                     while (bufferedReader.read(buffer) > 0) {
                         // 将消息发送给私聊对象
-                        singleUserPrintStream.print(buffer);
+                        singleUserPrintStream.println(buffer);
                     }
                 }
                 // 用户退出聊天室
@@ -83,7 +83,7 @@ public class ChatRoomSocketServer implements Runnable {
                     Set<Map.Entry<Long, PrintStream>> entries = hashMap.entrySet();
                     for (Map.Entry<Long, PrintStream> entrySet : entries) {
                         PrintStream printStream1 = entrySet.getValue();
-                        printStream1.print(String.format(QUIT_NOTICE_MSG, userIdQuit));
+                        printStream1.println(String.format(QUIT_NOTICE_MSG, userIdQuit));
                     }
                     //关闭退出群聊用户的Socket
                     myHashMap.remove(Long.valueOf(userIdQuit));
@@ -96,8 +96,9 @@ public class ChatRoomSocketServer implements Runnable {
                         PrintStream printWriterGroup = entrySet.getValue();
                         char[] buffer = new char[10];
                         while (bufferedReader.read(buffer) > 0) {
+                            System.out.println("发送成功...." + new String(buffer));
                             // 将消息发送给私聊对象
-                            printWriterGroup.print(buffer);
+                            printWriterGroup.println(buffer);
                         }
                     }
                 }
