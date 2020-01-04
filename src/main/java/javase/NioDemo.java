@@ -1,5 +1,6 @@
 package javase;
 
+import javase.socket.UserLable;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
@@ -144,6 +145,31 @@ public class NioDemo {
 
     }
 
+
+    // 用户ID获取
+    @Test
+    public void test22(){
+
+        String realMessage = getRealMessage("##1234$$", UserLable.USER_LOGIN_PREFIX, UserLable.USER_LOGIN_SUFFIX);
+        long l = Long.parseLong(realMessage);
+        System.out.println(realMessage);
+        System.out.println("解析数字：" + l);
+
+    }
+    private String getRealMessage(String message, String prefix, String suffix) {
+        return message.substring(prefix.length(), message.length() - suffix.length());
+
+    }
+
+    // Integer 比较大小 会报空指针异常吗？？
+    @Test
+    public void testIntegerGT(){
+        Integer min = null;
+        Integer max = 1;
+       boolean result = min < max;
+        System.out.println(result);
+
+    }
 
 
 
