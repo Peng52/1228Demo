@@ -12,8 +12,11 @@ import java.net.Socket;
 public class ChatRoomClient {
 
 
+    private static String homeIPAddress = "192.168.126.1";
+    private static String companyIPAddress = "192.168.1.228";
+
     public static void main(String[] str) throws IOException {
-        Socket socket = new Socket("192.168.1.228", 65533);
+        Socket socket = new Socket(companyIPAddress, 65533);
         //  输入流
         InputStream inputStream = socket.getInputStream();
         InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
@@ -47,6 +50,8 @@ public class ChatRoomClient {
         String userMessage = null;
         while ((userMessage = sysIn.readLine()) != null) {
             printStream.println(userMessage);
+            String response = bufferedReader.readLine();
+            System.out.println("回应" + response);
         }
 
 

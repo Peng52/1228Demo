@@ -94,12 +94,16 @@ public class ChatRoomSocketServer implements Runnable {
                     Set<Map.Entry<Long, PrintStream>> entries = hashMap.entrySet();
                     for (Map.Entry<Long, PrintStream> entrySet : entries) {
                         PrintStream printWriterGroup = entrySet.getValue();
-                        char[] buffer = new char[10];
+                        /*char[] buffer = new char[10];
                         while (bufferedReader.read(buffer) > 0) {
                             System.out.println("发送成功...." + new String(buffer));
                             // 将消息发送给私聊对象
                             printWriterGroup.println(buffer);
-                        }
+                        }*/
+                        System.out.println("客户端用户 ：" + entrySet.getKey() + "发送信息：" + readLineMSG);
+                        // 将消息发送给私聊对象
+                        printWriterGroup.println(readLineMSG);
+
                     }
                 }
 

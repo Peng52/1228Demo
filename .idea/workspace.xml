@@ -2,20 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce0f98bb-7482-4c52-871f-ed5ad2b47197" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomSocketServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/javase/MesType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javase/MesType.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/javase/NioDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javase/NioDemo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/javase/socket/ChatRoomClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javase/socket/ChatRoomClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/javase/socket/ChatRoomServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javase/socket/ChatRoomServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/javase/socket/ChatRoomSocketServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javase/socket/ChatRoomSocketServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/javase/socket/ClientSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javase/socket/ClientSocket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/javase/socket/MyHashMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javase/socket/MyHashMap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/javase/socket/ServerSocketDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javase/socket/ServerSocketDemo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/javase/socket/UserLable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javase/socket/UserLable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +71,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.40395808" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -87,7 +90,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ChatRoomServer">
+  <component name="RunManager" selected="Application.ChatRoomClient">
     <configuration name="ChatRoomClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="javase.socket.ChatRoomClient" />
       <module name="demo" />
@@ -146,8 +149,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ChatRoomServer" />
         <item itemvalue="Application.ChatRoomClient" />
+        <item itemvalue="Application.ChatRoomServer" />
         <item itemvalue="JUnit.NioDemo.testBufferReader" />
         <item itemvalue="JUnit.NioDemo.testMapKey" />
         <item itemvalue="JUnit.ClientSocket.testClientSocket" />
@@ -226,6 +229,7 @@
                   </entry>
                 </map>
               </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -251,6 +255,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="println()因为 readLine方法必须要读到换行符" />
+    <option name="LAST_COMMIT_MESSAGE" value="println()因为 readLine方法必须要读到换行符" />
   </component>
   <component name="masterDetails">
     <states>

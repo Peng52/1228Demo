@@ -18,12 +18,15 @@ public class ChatRoomServer {
      * 2.每一个Socket连接单独使用一个线程
      * 3.根据消息的定义，实现 私聊、群聊消息的转发
      */
+    private static String homeIPAddress = "192.168.126.1";
+    private static String companyIPAddress = "192.168.1.228";
+
 
     // 主线程
     public static void main(String[] args) throws IOException {
 
         // 创建ServerSocket
-        InetAddress ipAddress = Inet4Address.getByName("192.168.126.1");
+        InetAddress ipAddress = Inet4Address.getByName(companyIPAddress);
         ServerSocket serverSocket = new ServerSocket(65533, 10, ipAddress);
         int count = 0;
         while (true) {
