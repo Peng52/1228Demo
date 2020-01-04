@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="peng1218" />
+        <module name="demo" />
       </profile>
     </annotationProcessing>
   </component>

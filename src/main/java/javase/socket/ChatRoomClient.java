@@ -13,7 +13,7 @@ public class ChatRoomClient {
 
 
     public static void main(String[] str) throws IOException {
-        Socket socket = new Socket("192.168.126.1", 65533);
+        Socket socket = new Socket("192.168.1.228", 65533);
         //  输入流
         InputStream inputStream = socket.getInputStream();
         InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
