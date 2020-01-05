@@ -1,6 +1,7 @@
 package javase.socket;
 
 import java.io.IOException;
+import java.io.PrintStream;
 import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.net.ServerSocket;
@@ -20,7 +21,7 @@ public class ChatRoomServer {
      */
     private static String homeIPAddress = "192.168.126.1";
     private static String companyIPAddress = "192.168.1.228";
-
+    private static MyHashMap<Long, PrintStream> myHashMap = new MyHashMap<>();
 
     // 主线程
     public static void main(String[] args) throws IOException {
@@ -33,7 +34,7 @@ public class ChatRoomServer {
             count ++;
             Socket accept = serverSocket.accept();
             // 每一个客户端连接过来 Socket，都会用一个单独的线程去跑
-            new Thread(new ChatRoomSocketServer(accept),"I am Thread " + count).start();
+            new Thread(new ChatRoomSocketServer(accept,myHashMap),"I am Thread " + count).start();
         }
 
     }

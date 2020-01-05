@@ -15,10 +15,11 @@ import static javase.socket.CustomMessage.QUIT_NOTICE_MSG;
 public class ChatRoomSocketServer implements Runnable {
 
     private Socket socket;
-    private MyHashMap<Long, PrintStream> myHashMap = new MyHashMap<>();
+    private MyHashMap<Long, PrintStream> myHashMap;
 
-    public ChatRoomSocketServer(Socket socket) {
+    public ChatRoomSocketServer(Socket socket, MyHashMap<Long, PrintStream> myHashMap) {
         this.socket = socket;
+        this.myHashMap = myHashMap;
     }
 
     /**
@@ -45,12 +46,11 @@ public class ChatRoomSocketServer implements Runnable {
 
             while ((readLineMSG = bufferedReader.readLine()) != null) {
                 // 用户登陆操作
-                if (readLineMSG.startsWith(UserLable.USER_LOGIN_PREFIX) && readLineMSG.endsWith(UserLable.USER_LOGIN_SUFFIX)) {
-                    String userIdMsg = getRealMessage(readLineMSG, UserLable.USER_LOGIN_PREFIX, UserLable.USER_LOGIN_SUFFIX);
+                if (readLineMSG.startsWith(UserLabel.USER_LOGIN_PREFIX) && readLineMSG.endsWith(UserLabel.USER_LOGIN_SUFFIX)) {
+                    String userIdMsg = getRealMessage(readLineMSG, UserLabel.USER_LOGIN_PREFIX, UserLabel.USER_LOGIN_SUFFIX);
                     Long userIdLogin = Long.parseLong(userIdMsg);
                     if (userIdLogin < 0) {
                         return;
-                        // TODO: 2019/12/28 用户输入的ID不合法
                     }
                     // 判断用户是否重复登录
                     PrintStream value = myHashMap.getValue(userIdLogin);
@@ -60,26 +60,24 @@ public class ChatRoomSocketServer implements Runnable {
                         // 保存用户的socket
                         myHashMap.put(userIdLogin, printStream);
                         printStream.println(CustomMessage.USER_LOGIN_SUCCESS);
-                        System.out.println("用户登录成功 ：" + userIdLogin);
+                        System.out.println("用户: " + userIdLogin +"登录服务器成功...");
                     }
 
                 }
                 // 1. 私聊消息@userId:
-                else if (readLineMSG.startsWith(UserLable.SINGLE_MSG_PREFIX) && readLineMSG.endsWith(UserLable.SINGLE_MSG_SUFFIX)) {
-                    String singleUserId = getRealMessage(readLineMSG, UserLable.SINGLE_MSG_PREFIX, UserLable.SINGLE_MSG_SUFFIX);
+                else if (readLineMSG.startsWith(UserLabel.SINGLE_MSG_PREFIX)) {
+                    String singleUserId = getUserId(readLineMSG, UserLabel.SINGLE_MSG_PREFIX, UserLabel.SINGLE_MSG_CONTAINS);
                     // 读取消息发给私聊用户
-                    PrintStream singleUserPrintStream = myHashMap.getValue(Long.getLong(singleUserId));
-                    char[] buffer = new char[10];
-                    while (bufferedReader.read(buffer) > 0) {
-                        // 将消息发送给私聊对象
-                        singleUserPrintStream.println(buffer);
-                    }
+                    PrintStream singleUserPrintStream = myHashMap.getValue(Long.parseLong(singleUserId));
+                    // 将消息发送给私聊对象
+                    singleUserPrintStream.println(readLineMSG);
                 }
                 // 用户退出聊天室
-                else if (readLineMSG.endsWith(UserLable.USER_QUIT)) {
-                    String userIdQuit = getRealMessage(readLineMSG, "", UserLable.USER_QUIT);
+                else if (readLineMSG.endsWith(UserLabel.USER_QUIT)) {
+                    String userIdQuit = getRealMessage(readLineMSG, "", UserLabel.USER_QUIT);
                     // 从MyHashMap中删除，并通知其他的聊天室成员
                     Map<Long, PrintStream> hashMap = myHashMap.getHashMap();
+                    // 获取登录用户
                     Set<Map.Entry<Long, PrintStream>> entries = hashMap.entrySet();
                     for (Map.Entry<Long, PrintStream> entrySet : entries) {
                         PrintStream printStream1 = entrySet.getValue();
@@ -94,12 +92,6 @@ public class ChatRoomSocketServer implements Runnable {
                     Set<Map.Entry<Long, PrintStream>> entries = hashMap.entrySet();
                     for (Map.Entry<Long, PrintStream> entrySet : entries) {
                         PrintStream printWriterGroup = entrySet.getValue();
-                        /*char[] buffer = new char[10];
-                        while (bufferedReader.read(buffer) > 0) {
-                            System.out.println("发送成功...." + new String(buffer));
-                            // 将消息发送给私聊对象
-                            printWriterGroup.println(buffer);
-                        }*/
                         System.out.println("客户端用户 ：" + entrySet.getKey() + "发送信息：" + readLineMSG);
                         // 将消息发送给私聊对象
                         printWriterGroup.println(readLineMSG);
@@ -108,13 +100,23 @@ public class ChatRoomSocketServer implements Runnable {
                 }
 
             }
-        } catch (IOException e) {
+        } catch (
+                IOException e) {
             e.printStackTrace();
         }
+
     }
 
     private String getRealMessage(String message, String prefix, String suffix) {
         return message.substring(prefix.length(), message.length() - suffix.length());
 
     }
+
+    private String getUserId(String message, String prefix, String suffix) {
+        String[] split = message.split(suffix);
+        String s = split[0];
+        String userId = s.substring(prefix.length());
+        return userId;
+    }
+
 }

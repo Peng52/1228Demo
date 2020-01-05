@@ -172,5 +172,20 @@ public class NioDemo {
     }
 
 
+    // 截取字符串 UserId
+    @Test
+    public void testUserId(){
+            String message = "@1234";
+            String prefix = UserLable.SINGLE_MSG_PREFIX;
+            String suffix = UserLable.SINGLE_MSG_CONTAINS;
 
-}
+            String[] split = message.split(suffix);
+            String s = split[0];
+            String substring = s.substring(prefix.length());
+            System.out.println(substring);
+
+        }
+
+
+    }
+

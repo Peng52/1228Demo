@@ -9,7 +9,7 @@ import java.net.Socket;
  * @Description : 聊天室 - 客户端
  * @Date : 2019-12-22
  */
-public class ChatRoomClient {
+public class ChatRoomClientNo1 {
 
 
     private static String homeIPAddress = "192.168.126.1";
@@ -30,32 +30,44 @@ public class ChatRoomClient {
         // 用户登录的逻辑
         String tip = "";
         while (true) {
-            String readLine = JOptionPane.showInputDialog(tip + "请输入用户名");
+            String readLine = JOptionPane.showInputDialog(tip + "请 001 号客户端，请输入用户名");
+            readLine = UserLabel.USER_LOGIN_PREFIX + readLine + UserLabel.USER_LOGIN_SUFFIX;
             printStream.println(readLine);
-            System.out.println("输入用户名....等待Server回应.....");
             String response = bufferedReader.readLine();
-            System.out.println("回应" + response);
             // 用户登录失败,则重试
             if (response != null && response.equals(CustomMessage.USER_LOGIN_REPEAT)) {
+                System.out.println(response);
                 continue;
             }
             // 登录成功
             if (response != null && response.equals(CustomMessage.USER_LOGIN_SUCCESS)) {
-                System.out.println("真的成功啦.....");
+                System.out.println(response);
                 break;
             }
         }
-
+        //
+        new Thread(new ChatRoomClientThead(bufferedReader),"客户端读取线程").start();
         // 发送私聊或者公聊消息
         String userMessage = null;
         while ((userMessage = sysIn.readLine()) != null) {
             printStream.println(userMessage);
-            String response = bufferedReader.readLine();
-            System.out.println("回应" + response);
         }
 
+    }
 
-        // 一次读取一行内容
+
+    private String getRealMessage(String message, String prefix, String suffix) {
+        return message.substring(prefix.length(), message.length() - suffix.length());
+
+    }
+
+
+    /**
+     * 删除代码：
+     */
+
+    /*
+    *  // 一次读取一行内容
         int count = 1;
         while (true) {
             String readLine = bufferedReader.readLine();
@@ -66,15 +78,17 @@ public class ChatRoomClient {
                 break;
             }
         }
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    * */
 
-
-    }
-
-
-    private String getRealMessage(String message, String prefix, String suffix) {
-        return message.substring(prefix.length(), message.length() - suffix.length());
-
-    }
 
 
 }
