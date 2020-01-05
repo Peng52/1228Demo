@@ -1,6 +1,6 @@
 package javase;
 
-import javase.socket.UserLable;
+import javase.socket.UserLabel;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
@@ -16,7 +16,6 @@ import java.nio.charset.CharsetEncoder;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.stream.Collectors;
 
 @Slf4j
 public class NioDemo {
@@ -150,7 +149,7 @@ public class NioDemo {
     @Test
     public void test22(){
 
-        String realMessage = getRealMessage("##1234$$", UserLable.USER_LOGIN_PREFIX, UserLable.USER_LOGIN_SUFFIX);
+        String realMessage = getRealMessage("##1234$$", UserLabel.USER_LOGIN_PREFIX, UserLabel.USER_LOGIN_SUFFIX);
         long l = Long.parseLong(realMessage);
         System.out.println(realMessage);
         System.out.println("解析数字：" + l);
@@ -176,8 +175,8 @@ public class NioDemo {
     @Test
     public void testUserId(){
             String message = "@1234";
-            String prefix = UserLable.SINGLE_MSG_PREFIX;
-            String suffix = UserLable.SINGLE_MSG_CONTAINS;
+            String prefix = UserLabel.SINGLE_MSG_PREFIX;
+            String suffix = UserLabel.SINGLE_MSG_CONTAINS;
 
             String[] split = message.split(suffix);
             String s = split[0];

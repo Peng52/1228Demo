@@ -2,9 +2,11 @@ package javase.socket;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.Date;
 import java.util.Map;
 import java.util.Set;
 
+import static javase.socket.CustomMessage.QUIT_MYSELF_MSG;
 import static javase.socket.CustomMessage.QUIT_NOTICE_MSG;
 
 /**
@@ -43,6 +45,10 @@ public class ChatRoomSocketServer implements Runnable {
 
             // 通过读取首行，判断用户消息的类型
             String readLineMSG = null;
+            // 用户登陆成功后保存ID
+            Long loginUserId = null;
+            // 消息前缀123
+            String sendMsgPre = null;
 
             while ((readLineMSG = bufferedReader.readLine()) != null) {
                 // 用户登陆操作
@@ -55,12 +61,14 @@ public class ChatRoomSocketServer implements Runnable {
                     // 判断用户是否重复登录
                     PrintStream value = myHashMap.getValue(userIdLogin);
                     if (value != null) {
-                        value.print(CustomMessage.USER_LOGIN_REPEAT);
+                        printStream.println(CustomMessage.USER_LOGIN_REPEAT);
                     } else {
                         // 保存用户的socket
                         myHashMap.put(userIdLogin, printStream);
                         printStream.println(CustomMessage.USER_LOGIN_SUCCESS);
-                        System.out.println("用户: " + userIdLogin +"登录服务器成功...");
+                        System.out.println("用户: " + userIdLogin + "登录服务器成功...");
+                        loginUserId = userIdLogin;
+                        sendMsgPre = "用户" + loginUserId + ": ";
                     }
 
                 }
@@ -70,21 +78,30 @@ public class ChatRoomSocketServer implements Runnable {
                     // 读取消息发给私聊用户
                     PrintStream singleUserPrintStream = myHashMap.getValue(Long.parseLong(singleUserId));
                     // 将消息发送给私聊对象
-                    singleUserPrintStream.println(readLineMSG);
+                    singleUserPrintStream.println(sendMsgPre + readLineMSG);
+                    // 服务器端添加日志记录
+                    System.out.println("给用户：" + singleUserId + "发送消息 ：" + readLineMSG);
+
                 }
                 // 用户退出聊天室
                 else if (readLineMSG.endsWith(UserLabel.USER_QUIT)) {
-                    String userIdQuit = getRealMessage(readLineMSG, "", UserLabel.USER_QUIT);
                     // 从MyHashMap中删除，并通知其他的聊天室成员
                     Map<Long, PrintStream> hashMap = myHashMap.getHashMap();
+                    Long userId = myHashMap.getKey(printStream);
                     // 获取登录用户
                     Set<Map.Entry<Long, PrintStream>> entries = hashMap.entrySet();
                     for (Map.Entry<Long, PrintStream> entrySet : entries) {
                         PrintStream printStream1 = entrySet.getValue();
-                        printStream1.println(String.format(QUIT_NOTICE_MSG, userIdQuit));
+                        if (printStream1.equals(printStream)) {
+                            printStream1.println(QUIT_MYSELF_MSG);
+                        } else {
+                            printStream1.println("系统消息：" + String.format(QUIT_NOTICE_MSG, userId));
+                        }
                     }
                     //关闭退出群聊用户的Socket
-                    myHashMap.remove(Long.valueOf(userIdQuit));
+                    myHashMap.remove(userId);
+                    // 服务器端添加日志记录
+                    System.out.println("用户：" + userId + "退出聊天室....");
                 }
                 // 发送群聊消息，遍历所有的Socket,并转发消息
                 else {
@@ -92,10 +109,12 @@ public class ChatRoomSocketServer implements Runnable {
                     Set<Map.Entry<Long, PrintStream>> entries = hashMap.entrySet();
                     for (Map.Entry<Long, PrintStream> entrySet : entries) {
                         PrintStream printWriterGroup = entrySet.getValue();
-                        System.out.println("客户端用户 ：" + entrySet.getKey() + "发送信息：" + readLineMSG);
-                        // 将消息发送给私聊对象
-                        printWriterGroup.println(readLineMSG);
-
+                        if (!printStream.equals(printWriterGroup)) {
+                            // 将消息发送给(除自己以外)每一个客户端
+                            printWriterGroup.println(sendMsgPre + readLineMSG + String.format(CustomMessage.SEND_MSG_TIME,new Date()));
+                            System.out.println("客户端ID "+ loginUserId + "：给ID " +
+                                    entrySet.getKey() + " 发送群聊消息：" + readLineMSG + String.format(CustomMessage.SEND_MSG_TIME,new Date()));
+                        }
                     }
                 }
 

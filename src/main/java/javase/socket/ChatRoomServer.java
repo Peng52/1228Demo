@@ -27,7 +27,7 @@ public class ChatRoomServer {
     public static void main(String[] args) throws IOException {
 
         // 创建ServerSocket
-        InetAddress ipAddress = Inet4Address.getByName(companyIPAddress);
+        InetAddress ipAddress = Inet4Address.getByName(homeIPAddress);
         ServerSocket serverSocket = new ServerSocket(65533, 10, ipAddress);
         int count = 0;
         while (true) {

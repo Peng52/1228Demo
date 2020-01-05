@@ -12,6 +12,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo" target="8" />
+      <module name="peng1218" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

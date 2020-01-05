@@ -16,7 +16,7 @@ public class ChatRoomClientNo1 {
     private static String companyIPAddress = "192.168.1.228";
 
     public static void main(String[] str) throws IOException {
-        Socket socket = new Socket(companyIPAddress, 65533);
+        Socket socket = new Socket(homeIPAddress, 65533);
         //  输入流
         InputStream inputStream = socket.getInputStream();
         InputStreamReader inputStreamReader = new InputStreamReader(inputStream);

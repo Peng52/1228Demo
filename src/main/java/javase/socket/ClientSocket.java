@@ -16,7 +16,7 @@ public class ClientSocket {
     // ClientSocket
     @Test
     public void testClientSocket() throws IOException {
-        Socket socket = new Socket("192.168.1.228",65533);
+        Socket socket = new Socket("",65533);
         InetSocketAddress inetSocketAddress = new InetSocketAddress("192.168.126.1",65533);
         //socket.connect(inetSocketAddress);
         InputStream inputStream = socket.getInputStream();
