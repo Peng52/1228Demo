@@ -182,7 +182,6 @@ public class NioDemo {
             String s = split[0];
             String substring = s.substring(prefix.length());
             System.out.println(substring);
-
         }
 
 
