@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce0f98bb-7482-4c52-871f-ed5ad2b47197" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/javase/nio/ChatRoomSelector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/peng1218.iml" beforeDir="false" afterPath="$PROJECT_DIR$/peng1218.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javase/NioDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javase/NioDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomClientNo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomClientNo1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomClientNo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomClientNo2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomClientNo3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomClientNo3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomSocketServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javase/socket/ClientSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javase/socket/ClientSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/javase/socket/CustomMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javase/socket/CustomMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/javase/NioDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javase/NioDemo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/javase/socket/ChatRoomServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javase/socket/ChatRoomServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/javase/socket/ChatRoomSocketServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javase/socket/ChatRoomSocketServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/javase/socket/ClientSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/javase/socket/ClientSocket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/javase/socket/UserLable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/javase/nio/ChatRoomSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/javase/nio/ChatRoomSelector.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,7 +34,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
+            <state relative-caret-position="621">
               <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -65,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomSocketServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+            <state relative-caret-position="405">
+              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,8 +58,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/javase/nio/ChatRoomSelector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="641">
-              <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+            <state relative-caret-position="436">
+              <caret line="41" column="58" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,7 +70,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://D:/Java/jdk1.8.0_211/src.zip!/java/nio/channels/SelectionKey.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="6534">
               <caret line="266" column="28" selection-start-line="266" selection-start-column="28" selection-end-line="266" selection-end-column="28" />
             </state>
           </provider>
@@ -98,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://D:/Java/jdk1.8.0_211/src.zip!/java/nio/channels/spi/AbstractSelectableChannel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="69" column="42" lean-forward="true" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
+            <state relative-caret-position="1215">
+              <caret line="69" column="42" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -107,7 +88,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://D:/Java/jdk1.8.0_211/src.zip!/java/net/InetSocketAddress.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
+            <state relative-caret-position="648">
               <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
             </state>
           </provider>
@@ -125,7 +106,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://D:/Java/jdk1.8.0_211/src.zip!/java/nio/channels/Selector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
+            <state relative-caret-position="4833">
               <caret line="205" column="30" selection-start-line="205" selection-start-column="22" selection-end-line="205" selection-end-column="30" />
             </state>
           </provider>
@@ -134,7 +115,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/javase/socket/CustomMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
+            <state relative-caret-position="351">
               <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
             </state>
           </provider>
@@ -144,7 +125,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomClientNo1.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
-              <caret line="15" column="61" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="15" selection-end-column="61" />
+              <caret line="15" column="61" selection-start-line="14" selection-start-column="3" selection-end-line="15" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -220,10 +201,10 @@
     <option name="jreName" value="#JAVA_HOME" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="2579" />
-    <option name="height" value="1407" />
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="2580" />
+    <option name="height" value="1408" />
   </component>
   <component name="ProjectId" id="1VvFkvAlikceYqgmLXAfZEE036J" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -232,8 +213,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,6 +268,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -418,6 +399,7 @@
       <workItem from="1577458098148" duration="6947000" />
       <workItem from="1578125809859" duration="1710000" />
       <workItem from="1578224046083" duration="10085000" />
+      <workItem from="1578410696361" duration="2560000" />
     </task>
     <task id="LOCAL-00001" summary="IpAddress String">
       <created>1578152302614</created>
@@ -430,14 +412,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10231000" />
+    <option name="totallyTimeSpent" value="12791000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1980" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7849099" visible="true" weight="0.19267015" />
-      <window_info id="Structure" order="1" sideWeight="0.2150901" side_tool="true" visible="true" weight="0.19267015" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.78401726" visible="true" weight="0.19528796" />
+      <window_info id="Structure" order="1" sideWeight="0.21598272" side_tool="true" visible="true" weight="0.19528796" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -582,7 +564,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
+        <state relative-caret-position="621">
           <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -590,34 +572,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javase/socket/CustomMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomSocketServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        <state relative-caret-position="405">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_211/src.zip!/java/nio/channels/Selector.java">
+    <entry file="jar://D:/Java/jdk1.8.0_211/src.zip!/java/nio/channels/SelectionKey.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="205" column="30" selection-start-line="205" selection-start-column="22" selection-end-line="205" selection-end-column="30" />
+        <state relative-caret-position="6534">
+          <caret line="266" column="28" selection-start-line="266" selection-start-column="28" selection-end-line="266" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomClientNo1.java">
+    <entry file="jar://D:/Java/jdk1.8.0_211/src.zip!/java/nio/channels/spi/AbstractSelectableChannel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="15" column="61" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="15" selection-end-column="61" />
+        <state relative-caret-position="1215">
+          <caret line="69" column="42" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_211/src.zip!/java/net/InetSocketAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -628,31 +610,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_211/src.zip!/java/net/InetSocketAddress.java">
+    <entry file="jar://D:/Java/jdk1.8.0_211/src.zip!/java/nio/channels/Selector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+        <state relative-caret-position="4833">
+          <caret line="205" column="30" selection-start-line="205" selection-start-column="22" selection-end-line="205" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_211/src.zip!/java/nio/channels/spi/AbstractSelectableChannel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/javase/socket/CustomMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="69" column="42" lean-forward="true" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
+        <state relative-caret-position="351">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_211/src.zip!/java/nio/channels/SelectionKey.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/javase/socket/ChatRoomClientNo1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="266" column="28" selection-start-line="266" selection-start-column="28" selection-end-line="266" selection-end-column="28" />
+        <state relative-caret-position="351">
+          <caret line="15" column="61" selection-start-line="14" selection-start-column="3" selection-end-line="15" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/javase/nio/ChatRoomSelector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+        <state relative-caret-position="436">
+          <caret line="41" column="58" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
